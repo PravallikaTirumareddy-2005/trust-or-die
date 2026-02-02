@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trust or Die</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MODE SELECTION SCREEN -->
+    <div id="modeScreen" class="screen">
+        <h1>Trust or Die</h1>
+        <p class="warning">Choose your fate</p>
+
+        <button class="modeBtn normal" onclick="startGame('normal')">
+            Normal Mode
+        </button>
+
+        <button class="modeBtn hardcore" onclick="startGame('hardcore')">
+            Hardcore Mode
+        </button>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game" class="screen" style="display:none;">
+
+        <h1>Trust or Die</h1>
+        <p class="warning" id="modeLabel"></p>
+
+        <div id="status">
+    <span id="round">Round 1 / 10</span>
+    <span id="best">Best: 0</span>
+    <span id="timer">Time: 8s</span>
+</div>
+
+
+        <div id="hints"></div>
+        <div id="doors"></div>
+        <div id="message"></div>
+
+        <button id="restartBtn" style="display:none;">Restart Game</button>
+        <button id="backBtn" style="display:none;">Back to Mode Selection</button>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
